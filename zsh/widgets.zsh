@@ -9,9 +9,11 @@ bindkey "^W" _print-pwd
 
 # add 'sudo ' at the beginning of the line
 function _prepend-sudo() {
-  if [[ "$BUFFER" != su(do|)\ * ]]; then
+  if [[ "$BUFFER" != "sudo "* ]]; then
     BUFFER="sudo $BUFFER"
     (( CURSOR += 5 ))
+  else
+    BUFFER="${BUFFER:5}"
   fi
 }
 zle -N _prepend-sudo
