@@ -22,5 +22,6 @@ bindkey "^F" _prepend-sudo
 # kill last word on ctrl+backspace
 bindkey "^H" backward-kill-word
 
-# kill next word on ctrl+D
+# kill next word on ctrl+D or ctrl+del
 bindkey "^D" kill-word
+bindkey "^[[3;5~" kill-word
