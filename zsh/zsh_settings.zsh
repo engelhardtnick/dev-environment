@@ -1,4 +1,4 @@
-ZSH_THEME="agnoster"
+ZSH_THEME="gallois"
 
 # use hyphen-insensitive completion.
 HYPHEN_INSENSITIVE="true"
