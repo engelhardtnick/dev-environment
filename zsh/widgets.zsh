@@ -25,3 +25,7 @@ bindkey "^H" backward-kill-word
 # kill next word on ctrl+D or ctrl+del
 bindkey "^D" kill-word
 bindkey "^[[3;5~" kill-word
+
+# use back- and forward search with pattern matching
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
