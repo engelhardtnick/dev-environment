@@ -3,3 +3,7 @@ export PATH="/opt/idea-IC-192.6817.14/bin:$PATH"
 export PATH="/opt/FreeFileSync/Bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="/opt/pycharm-community-2020.1/bin:$PATH"
+export PATH="/home/nick/projects/flutter/flutter/bin:$PATH"
+export PATH="/opt/TurboVNC/bin:$PATH"
+export ANDROID_SDK_ROOT=/home/nick/projects/Android
+
