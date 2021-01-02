@@ -9,5 +9,7 @@ source $ZSH/oh-my-zsh.sh
 source $CUSTOM_ZSH/zsh/aliases.zsh
 source $CUSTOM_ZSH/$HOST-specific/env_vars.zsh
 
-
 export PATH=$PATH:/usr/sbin
+
+# disable touchpad while typing
+syndaemon -i 0.2 -K -R -d
