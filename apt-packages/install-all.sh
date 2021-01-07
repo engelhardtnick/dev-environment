@@ -1,6 +1,13 @@
 #!/usr/bin/bash
-sudo apt install -y vim git zsh python3.7* python3.6* zim gnome-shell gnome-shell-common gnome-shell-extensions \
-gnome-tweaks
+sudo apt install -y vim \
+    git \
+    zsh \
+    zim \
+    gnome-shell \
+    gnome-shell-common \
+    gnome-shell-extensions \
+    gnome-tweaks \
+    xserver-xorg-input-synaptics
 
 #TODO install and configure ohmyzsh
 #TODO install atom
