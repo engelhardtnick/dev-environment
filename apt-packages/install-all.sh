@@ -4,6 +4,7 @@ sudo apt install -y \
     git \
     zsh \
     zim \
+    thunar \
     gnome-shell \
     gnome-shell-common \
     gnome-shell-extensions \
