@@ -1,5 +1,6 @@
 #!/usr/bin/bash
-sudo apt install -y vim \
+sudo apt install -y \
+    vim \
     git \
     zsh \
     zim \
@@ -7,8 +8,9 @@ sudo apt install -y vim \
     gnome-shell-common \
     gnome-shell-extensions \
     gnome-tweaks \
-    xserver-xorg-input-synaptics
-
+    xserver-xorg-input-synaptics \
+    htop \
+    viewnior 
 #TODO install and configure ohmyzsh
 #TODO install atom
 #TODO install and configure arc application launcher
