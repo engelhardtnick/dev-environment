@@ -5,7 +5,13 @@ function reset-branch-to-origin() {
 }
 
 function update-master() {
-  export current_branch=$(git symbolic-ref --short HEAD);
-  git checkout master && git pull;
-  git checkout $current_branch
+  main_branch_names=("master" "main")
+  current_branch=$(git symbolic-ref --short HEAD);
+  # shellcheck disable=SC2076
+  if [[ "${main_branch_names[*]}" =~ "${current_branch}" ]]; then
+    git pull
+  else
+    git checkout master && git pull;
+    git checkout $current_branch;
+fi
 }
