@@ -1,7 +1,7 @@
 # print pwd and copy to clipboard on ctrl+w
 function _print-pwd {
   echo $PWD
-  echo -n $PWD | xclip -sel clip
+  echo -n $PWD | pbcopy
   zle reset-prompt
 }
 zle -N _print-pwd
@@ -17,14 +17,14 @@ function _prepend-sudo() {
   fi
 }
 zle -N _prepend-sudo
-bindkey "^F" _prepend-sudo
+bindkey '^F' _prepend-sudo
 
 # kill last word on ctrl+backspace
-bindkey "^H" backward-kill-word
+bindkey "^?" backward-kill-word
 
 # kill next word on ctrl+D or ctrl+del
-bindkey "^D" kill-word
-bindkey "^[[3;5~" kill-word
+bindkey '^D' kill-word
+bindkey '^[[3~' kill-word
 
 # use back- and forward search with pattern matching
 bindkey '^R' history-incremental-pattern-search-backward

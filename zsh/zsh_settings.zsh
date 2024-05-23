@@ -1,4 +1,4 @@
-ZSH_THEME="gallois"
+ZSH_THEME="oldgallois"
 
 # use hyphen-insensitive completion.
 HYPHEN_INSENSITIVE="true"
@@ -12,4 +12,4 @@ COMPLETION_WAITING_DOTS="true"
 # commands prefixed with a space don't land in history
 setopt HIST_IGNORE_SPACE
 
-plugins=(git)
+plugins=(git zsh-completions)
