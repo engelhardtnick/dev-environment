@@ -1,7 +1,7 @@
 # print pwd and copy to clipboard on ctrl+w
 function _print-pwd {
   echo $PWD
-  echo -n $PWD | pbcopy
+  echo -n $PWD | $CLIPBOARD_COPY
   zle reset-prompt
 }
 zle -N _print-pwd

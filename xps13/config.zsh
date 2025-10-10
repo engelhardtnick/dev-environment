@@ -5,3 +5,5 @@ export PATH="/home/nick/projects/flutter/flutter/bin:$PATH"
 export PATH="/opt/TurboVNC/bin:$PATH"
 export ANDROID_SDK_ROOT=/home/nick/projects/Android
 
+# Clipboard copy command for Linux
+export CLIPBOARD_COPY="xclip -selection clipboard"
