@@ -17,7 +17,12 @@ echo "Repository location: $REPO_DIR"
 # Function to backup existing file
 backup_file() {
   local file=$1
-  if [[ -f "$file" ]] || [[ -L "$file" ]]; then
+  if [[ -L "$file" ]]; then
+    # It's already a symlink, just remove it
+    echo -e "${YELLOW}Removing existing symlink $file${NC}"
+    rm "$file"
+  elif [[ -f "$file" ]]; then
+    # It's a real file, back it up
     local backup="${file}_backup_$(date +%Y%m%d_%H%M%S)"
     echo -e "${YELLOW}Backing up existing $file to $backup${NC}"
     mv "$file" "$backup"
@@ -45,6 +50,17 @@ echo "  3) Skip    - I'll set this up manually later"
 echo ""
 
 read -p "Select your machine type (1-3): " machine_choice
+
+# Check if backup exists and confirm deletion
+if [[ -f "$REPO_DIR/zsh/.zshrc.bak" ]]; then
+  echo -e "${YELLOW}Found existing backup: $REPO_DIR/zsh/.zshrc.bak${NC}"
+  read -p "Delete this backup? (y/n): " delete_backup
+  if [[ "$delete_backup" != "y" ]]; then
+    echo -e "${RED}Installation aborted. Please remove or rename the backup file manually.${NC}"
+    exit 1
+  fi
+  rm -f "$REPO_DIR/zsh/.zshrc.bak"
+fi
 
 case $machine_choice in
   1)
