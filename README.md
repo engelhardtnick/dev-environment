@@ -35,7 +35,7 @@ Install based on your needs (see machine configs for what's included):
 
 - [pyenv](https://github.com/pyenv/pyenv)
 - [poetry](https://python-poetry.org/)
-- [nvm](https://github.com/nvm-sh/nvm)
+- [fnm](https://github.com/Schniz/fnm) (Node version management)
 - [SDKMAN](https://sdkman.io/)
 - [AWS CLI](https://aws.amazon.com/cli/)
 - [Homebrew](https://brew.sh/)

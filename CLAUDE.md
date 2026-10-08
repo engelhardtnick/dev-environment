@@ -20,7 +20,7 @@ The ZSH configuration is split into multiple modular files that are sourced in a
 4. **aliases.zsh** - Command aliases
 5. **functions.zsh** - Custom shell functions
 
-The main `.zshrc` file sources these modules and sets up environment-specific tools (pyenv, poetry, sdkman, nvm, aws-cli).
+The main `.zshrc` file sources these modules and sets up environment-specific tools (pyenv, poetry, sdkman, fnm, aws-cli).
 
 ### Machine-Specific Configuration
 
@@ -95,7 +95,7 @@ Install based on your needs:
 - **pyenv** - Python version management
 - **poetry** - Python dependency management
 - **sdkman** - Java/JVM tool management (macOS)
-- **nvm** - Node version management
+- **fnm** - Node version management
 - **aws-cli** - AWS command line tools
 
 See README.md for detailed installation instructions with links for all dependencies.
